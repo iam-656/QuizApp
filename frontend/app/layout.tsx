@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "QuizApp",
+  title: "QuizTrust",
   description: "A secure proctored quiz platform",
 };
 

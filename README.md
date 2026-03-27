@@ -1,4 +1,4 @@
-# QuizApp
+# QuizTrust
 
 Full-stack web application with Next.js (frontend) and Node.js/Express (backend), using Supabase (PostgreSQL).
 

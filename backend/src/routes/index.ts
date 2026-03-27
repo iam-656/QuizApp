@@ -11,7 +11,7 @@ const router = Router();
 // API Root Information
 router.get('/', (req, res) => {
   res.json({
-    message: 'QuizApp API is active',
+    message: 'QuizTrust API is active',
     version: '1.0.0',
     endpoints: {
       auth: '/api/auth',

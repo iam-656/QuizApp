@@ -14,7 +14,7 @@ app.use(express.json());
 
 // Root Route (Informational)
 app.get('/', (req: Request, res: Response) => {
-  res.send('QuizApp Backend is running! Use /api for all endpoints.');
+  res.send('QuizTrust Backend is running! Use /api for all endpoints.');
 });
 
 // API Routes
