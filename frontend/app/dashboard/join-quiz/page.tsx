@@ -11,8 +11,15 @@ export default function JoinQuizPage() {
   const [code, setCode] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
   const router = useRouter();
   const { token, isAuthenticated, loading: authLoading } = useAuth();
+
+  useEffect(() => {
+    // Detect mobile device on client mount
+    const checkMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    setIsMobileDevice(checkMobile);
+  }, []);
 
   const handleJoin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -57,7 +64,18 @@ export default function JoinQuizPage() {
       <Sidebar />
       
       <main className="flex-1 md:ml-64 flex items-center justify-center p-4 md:p-8 pt-20 md:pt-8 w-full">
-        <div className="max-w-md w-full">
+        {isMobileDevice ? (
+          <div className="max-w-md w-full bg-white rounded-3xl shadow-xl shadow-red-100/50 p-10 border border-red-100 text-center">
+            <div className="bg-red-50 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-3">
+              <ShieldCheck className="text-red-500" size={40} />
+            </div>
+            <h1 className="text-2xl font-black text-gray-900 mb-4">Desktop Required</h1>
+            <p className="text-gray-500 font-medium leading-relaxed">
+              To ensure assessment integrity and proper proctoring, quizzes cannot be taken on mobile devices or tablets. Please switch to a desktop or laptop computer.
+            </p>
+          </div>
+        ) : (
+          <div className="max-w-md w-full">
           <div className="bg-white rounded-3xl shadow-xl shadow-blue-100/50 p-10 border border-gray-100 text-center">
             <div className="bg-blue-50 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-3">
               <ShieldCheck className="text-blue-600" size={40} />
@@ -111,7 +129,7 @@ export default function JoinQuizPage() {
               </p>
             </div>
           </div>
-        </div>
+        )}
       </main>
     </div>
   );
