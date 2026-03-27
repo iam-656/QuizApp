@@ -4,6 +4,7 @@ import userRoutes from './userRoutes';
 import quizRoutes from './quizRoutes';
 import attemptRoutes from './attemptRoutes';
 import reportRoutes from './reportRoutes';
+import feedbackRoutes from './feedbackRoutes';
 import { authenticateJWT } from '../middleware/authMiddleware';
 
 const router = Router();
@@ -18,7 +19,8 @@ router.get('/', (req, res) => {
       users: '/api/users',
       quizzes: '/api/quizzes',
       attempts: '/api/attempts',
-      reports: '/api/reports'
+      reports: '/api/reports',
+      feedbacks: '/api/feedbacks'
     }
   });
 });
@@ -34,6 +36,9 @@ router.use('/attempts', attemptRoutes);
 
 // Report routes (Protected - Quiz Creator Only)
 router.use('/reports', reportRoutes);
+
+// Feedback routes (Protected)
+router.use('/feedbacks', feedbackRoutes);
 
 // User routes (Protected)
 router.use('/users', authenticateJWT as any, userRoutes);

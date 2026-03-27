@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, PlusCircle, Key, FileBarChart, LogOut, TrendingUp, Menu, X } from 'lucide-react';
+import { LayoutDashboard, PlusCircle, Key, FileBarChart, LogOut, TrendingUp, Menu, X, MessageSquare } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 
 export default function Sidebar() {
@@ -17,6 +17,7 @@ export default function Sidebar() {
     { name: 'Join Quiz', icon: Key, href: '/dashboard/join-quiz' },
     { name: 'Analytics', icon:TrendingUp, href: '/dashboard/analytics' },
     { name: 'Reports', icon: FileBarChart, href: '/dashboard/reports' },
+    { name: 'Feedback', icon: MessageSquare, href: '/dashboard/feedback' },
   ];
 
   return (
