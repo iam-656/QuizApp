@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/hooks/useAuth';
 import axios from 'axios';
@@ -75,8 +75,7 @@ export default function JoinQuizPage() {
             </p>
           </div>
         ) : (
-          <div className="max-w-md w-full">
-          <div className="bg-white rounded-3xl shadow-xl shadow-blue-100/50 p-10 border border-gray-100 text-center">
+          <div className="max-w-md w-full bg-white rounded-3xl shadow-xl shadow-blue-100/50 p-10 border border-gray-100 text-center">
             <div className="bg-blue-50 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-3">
               <ShieldCheck className="text-blue-600" size={40} />
             </div>
