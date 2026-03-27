@@ -101,7 +101,7 @@ export default function CreateQuizPage() {
     <div className="min-h-screen bg-[#f0ebf8] flex">
       <Sidebar />
       
-      <main className="flex-1 ml-64 p-8">
+      <main className="flex-1 md:ml-64 p-4 md:p-8 pt-20 md:pt-8 w-full">
         <div className="max-w-3xl mx-auto space-y-6">
           {/* Header Card */}
           <div className="bg-white rounded-xl shadow-sm border-t-[10px] border-blue-600 overflow-hidden">

@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/hooks/useAuth';
 import axios from 'axios';
+import Sidebar from '@/components/Sidebar';
 import { FileText, ChevronRight, Trash2, AlertTriangle } from 'lucide-react';
 
 interface Attempt {
@@ -73,8 +74,10 @@ export default function ReportsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-20">
-      <div className="max-w-4xl mx-auto px-4 pt-10">
+    <div className="min-h-screen bg-gray-50 flex">
+      <Sidebar />
+      <main className="flex-1 md:ml-64 p-4 md:p-8 pt-20 md:pt-8 w-full">
+        <div className="max-w-4xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
           <div className="flex items-center gap-4">
             <div className="bg-blue-600 p-2 rounded-lg text-white">
@@ -148,7 +151,7 @@ export default function ReportsPage() {
             ))}
           </div>
         )}
-      </div>
+      </main>
     </div>
   );
 }

@@ -56,7 +56,7 @@ export default function JoinQuizPage() {
     <div className="min-h-screen bg-[#f8fafc] flex">
       <Sidebar />
       
-      <main className="flex-1 ml-64 flex items-center justify-center p-8">
+      <main className="flex-1 md:ml-64 flex items-center justify-center p-4 md:p-8 pt-20 md:pt-8 w-full">
         <div className="max-w-md w-full">
           <div className="bg-white rounded-3xl shadow-xl shadow-blue-100/50 p-10 border border-gray-100 text-center">
             <div className="bg-blue-50 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-3">

@@ -93,7 +93,7 @@ export default function DetailedReportPage() {
     <div className="min-h-screen bg-[#f8fafc] flex print:bg-white">
       <Sidebar />
       
-      <main className="flex-1 ml-64 p-8 print:ml-0 print:p-0">
+      <main className="flex-1 md:ml-64 p-4 md:p-8 pt-20 md:pt-8 w-full print:ml-0 print:p-0">
         <div className="max-w-5xl mx-auto">
           {/* Top Navigation */}
           <button 

@@ -157,7 +157,7 @@ export default function AnalyticsPage() {
     <div className="min-h-screen bg-[#f8fafc] flex">
       <Sidebar />
       
-      <main className="flex-1 ml-64 p-8">
+      <main className="flex-1 md:ml-64 p-4 md:p-8 pt-20 md:pt-8 w-full">
         <div className="max-w-7xl mx-auto">
           <header className="mb-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
