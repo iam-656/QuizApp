@@ -35,7 +35,7 @@ export default function Sidebar() {
         />
       )}
 
-      <div className={`w-64 bg-white h-screen border-r border-gray-200 flex flex-col fixed left-0 top-0 z-50 transition-transform duration-300 print:hidden ${isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
+      <div className={`w-64 bg-white h-[100dvh] border-r border-gray-200 flex flex-col fixed left-0 top-0 z-50 transition-transform duration-300 print:hidden ${isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
         <div className="p-6 flex justify-between items-center">
           <h1 className="text-2xl font-black text-blue-600 tracking-tight">QuizApp</h1>
           <button onClick={() => setIsOpen(false)} className="md:hidden p-1 text-gray-400 hover:bg-gray-100 rounded-lg">
@@ -43,7 +43,7 @@ export default function Sidebar() {
           </button>
         </div>
       
-      <nav className="flex-1 px-4 space-y-2">
+      <nav className="flex-1 px-4 space-y-2 overflow-y-auto">
         {menuItems.map((item) => {
           const isActive = pathname === item.href;
           return (
