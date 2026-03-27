@@ -109,7 +109,7 @@ export default function CreateQuizPage() {
               <input
                 type="text"
                 placeholder="Quiz Title"
-                className="w-full text-4xl font-bold border-b border-transparent focus:border-gray-200 outline-none py-2"
+                className="w-full text-4xl font-bold border-b border-transparent focus:border-gray-200 outline-none py-2 text-gray-900 placeholder-gray-300"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
               />
@@ -118,7 +118,7 @@ export default function CreateQuizPage() {
                 <input
                   type="text"
                   placeholder="Quiz Description"
-                  className="w-full py-2 outline-none text-gray-600"
+                  className="w-full py-2 outline-none text-gray-900 placeholder-gray-400"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                 />
@@ -159,7 +159,7 @@ export default function CreateQuizPage() {
                   <input
                     type="text"
                     placeholder={`Question ${qIndex + 1}`}
-                    className="w-full bg-gray-50 p-4 rounded-lg font-semibold outline-none focus:ring-2 focus:ring-blue-100"
+                    className="w-full bg-gray-50 p-4 rounded-lg font-semibold outline-none focus:ring-2 focus:ring-blue-100 text-gray-900 placeholder-gray-300"
                     value={q.question_text}
                     onChange={(e) => updateQuestion(qIndex, 'question_text', e.target.value)}
                   />
@@ -186,7 +186,7 @@ export default function CreateQuizPage() {
                     <input
                       type="text"
                       placeholder={`Option ${oIndex + 1}`}
-                      className={`flex-1 p-2 outline-none border-b border-transparent focus:border-gray-200 ${q.correct_answer === opt && opt !== '' ? 'font-bold text-green-700' : ''}`}
+                      className={`flex-1 p-2 outline-none border-b border-transparent focus:border-gray-200 placeholder-gray-300 ${q.correct_answer === opt && opt !== '' ? 'font-bold text-green-700' : 'text-gray-900'}`}
                       value={opt}
                       onChange={(e) => updateOption(qIndex, oIndex, e.target.value)}
                     />
