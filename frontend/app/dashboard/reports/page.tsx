@@ -151,6 +151,7 @@ export default function ReportsPage() {
             ))}
           </div>
         )}
+        </div>
       </main>
     </div>
   );
